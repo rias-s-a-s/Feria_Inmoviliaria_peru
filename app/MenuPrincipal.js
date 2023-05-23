@@ -56,17 +56,20 @@ const MenuPrincipal = ({ setZoom, zoom, setContraste }) => {
               isOpen ? ` right-0 py-11 opacity-100` : `hidden`
             }`}
           >
-            <ItemMenu ruta="/Gestiones" setIsOpen={setIsOpen}>
-              Gestiones
+            <ItemMenu ruta="/Proyectos" setIsOpen={setIsOpen}>
+              Proyectos
             </ItemMenu>
-            <ItemMenu ruta="" setIsOpen={setIsOpen}>
+            <ItemMenu ruta="/Noticias" setIsOpen={setIsOpen}>
               Noticias
             </ItemMenu>
-            <ItemMenu ruta="" setIsOpen={setIsOpen}>
-              Congreso e Investigación
+            <ItemMenu ruta="/Inmobiliarias" setIsOpen={setIsOpen}>
+              Inmobiliarias
             </ItemMenu>
-            <ItemMenu rute="" setIsOpen={setIsOpen}>
-              Contáctenos
+            <ItemMenu rute="/Corredores" setIsOpen={setIsOpen}>
+              Corredores
+            </ItemMenu>
+            <ItemMenu rute="/Contacto" setIsOpen={setIsOpen}>
+              Contactanos
             </ItemMenu>
 
             {/* Boton WebMaster */}

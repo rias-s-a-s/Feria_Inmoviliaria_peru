@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <Header />
       <MenuPrincipal />
-      <div>{children}</div>
+      <div className="-mt-12">{children}</div>
     </html>
   );
 }
