@@ -78,7 +78,7 @@ const HomePage = () => {
       <h1 className="text-center font-bold text-2xl text-blue-800">
         Noticias Destacadas{" "}
       </h1>
-      <div className="max-w-5xl mx-auto grid justify-center md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-7 my-10">
+      <div className="max-w-6xl mx-auto grid justify-center md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-7 my-10">
         <ItemNoticia />
         <ItemNoticia />
         <ItemNoticia />
