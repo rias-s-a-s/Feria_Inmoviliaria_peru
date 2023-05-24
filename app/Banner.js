@@ -2,15 +2,15 @@ import Image from "next/image";
 
 const Banner = () => {
   return (
-    <div className="relative h-[300px] sm:h-[400px] lg:h-[500px] xl:h-[600px] 2xl:h-[700px]">
+    <div className="relative h-[200px] sm:h-[300px] lg:h-[400px]">
       <Image src="https://links.papareact.com/0fm" fill={true} alt="Banner" />
 
-      <div className="absolute top-[20%] text-center w-full">
+      <div className="absolute top-[30%] text-center w-full">
         <div className="rounded-xl bg-white/30 px-16 py-10 shadow-lg backdrop-blur-sm max-sm:px-8">
-          <p className="text-sm sm:text-2xl">
+          {/* <p className="text-sm sm:text-2xl">
             Encuentra el hogar de tus sueños
-          </p>
-          <div className="container  mx-auto flex justify-center items-center p-2 md:p-0">
+          </p> */}
+          {/* <div className="container  mx-auto flex justify-center items-center p-2 md:p-0">
             <div className="border border-gray-300 p-6 grid grid-cols-1 gap-6 bg-white shadow-lg rounded-lg">
               <div className="flex flex-col md:flex-row">
                 <div className>
@@ -121,6 +121,11 @@ const Banner = () => {
                 </button>
               </div>
             </div>
+          </div> */}
+          <div className="container  mx-auto flex justify-center items-center p-2 md:p-0">
+            <p className="text-sm sm:text-2xl">
+              Encuentra el hogar de tus sueños
+            </p>
           </div>
         </div>
       </div>
