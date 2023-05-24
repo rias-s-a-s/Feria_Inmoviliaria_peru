@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -83,7 +84,7 @@ const Header = () => {
                 src="/feria_logo.png"
                 width={300}
                 height={300}
-                alt="Escudo Normal Superior Ibagué"
+                alt="Logo"
                 className="object-contain"
               />
             </div>
