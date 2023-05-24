@@ -21,7 +21,7 @@ const BodyMain = () => {
               href={"/Contactanos"}
               className="inline-flex text-white bg-blue-500 py-2 px-4 focus:outline-none hover:bg-opacity-80 rounded text-sm"
             >
-              Contactanos
+              contáctanos
             </Link>
           </div>
         </div>
