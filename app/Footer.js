@@ -1,11 +1,9 @@
-import Image from "next/image";
-import Link from "next/link";
-
-const Header = () => {
+"use client";
+const Footer = () => {
   return (
-    <>
-      <div className="sm:flex hidden flex-col md:flex-row md:flex-wrap items-center justify-around border-b bg-gray-100 p-3 space-y-4">
-        <div className="flex items-center space-x-2 rounded  py-1 px-2 text-slate-500 shadow-lg">
+    <footer className="bg-gradient-to-r from-gray-100 via-[#bce1ff] to-gray-100">
+      <div className="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           <div className="flex  space-x-6 ">
             <a className="hover:opacity-75" target="_blank" rel="noreferrer">
               <svg
@@ -71,90 +69,51 @@ const Header = () => {
               </svg>
             </a>
           </div>
-        </div>
-        <div className=" md:block hidden text-lg font-bold text-gray-100">
-          <Link href="/">
-            <div
-              style={{ filter: "drop-shadow(0px 0px 6px #99C5B5)" }}
-              className="cursor-pointer"
-            >
-              <Image
-                title="Ir a inicio"
-                src="/feria_logo.png"
-                width={300}
-                height={300}
-                alt="Escudo Normal Superior Ibagué"
-                className="object-contain"
-              />
+          <div className="grid grid-cols-1 gap-8 lg:col-span-2 sm:grid-cols-2 lg:grid-cols-4">
+            <div>
+              <p className="font-medium">Company</p>
+              <nav className="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
+                <a className="hover:opacity-75"> About </a>
+                <a className="hover:opacity-75"> Meet the Team </a>
+                <a className="hover:opacity-75"> History </a>
+                <a className="hover:opacity-75"> Careers </a>
+              </nav>
             </div>
-          </Link>
-        </div>
-        <div className="flex items-center space-x-5 ">
-          <form className="flex items-center">
-            <label htmlFor="voice-search" className="sr-only">
-              Buscar...
-            </label>
-            <div className="relative w-full">
-              <div className="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-                <svg
-                  className="w-5 h-5 text-gray-500 dark:text-gray-400"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </div>
-              <input
-                type="text"
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg  ring-1 ring-blue-500 block w-full pl-10 p-2.5 focus:ring-blue-800 "
-                placeholder="Search ..."
-                required
-              />
-              {/* <button
-                type="button"
-                className="flex absolute inset-y-0 right-0 items-center pr-3"
-              >
-                <svg
-                  className="w-4 h-4 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                      d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zm4 10.93A7.001 7.001 0 0017 8a1 1 0 10-2 0A5 5 0 015 8a1 1 0 00-2 0 7.001 7.001 0 006 6.93V17H6a1 1 0 100 2h8a1 1 0 100-2h-3v-2.07z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </button> */}
+            <div>
+              <p className="font-medium">Services</p>
+              <nav className="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
+                <a className="hover:opacity-75"> 1on1 Coaching </a>
+                <a className="hover:opacity-75"> Company Review </a>
+                <a className="hover:opacity-75"> Accounts Review </a>
+                <a className="hover:opacity-75"> HR Consulting </a>
+                <a className="hover:opacity-75"> SEO Optimisation </a>
+              </nav>
             </div>
-            <button
-              type="submit"
-              className="inline-flex items-center py-2.5 px-3 ml-2 text-sm font-medium text-white bg-[#0188c5] rounded-lg border border-[#0188c5] hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 "
-            >
-              <svg
-                className="w-5 h-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                />
-              </svg>
-            </button>
-          </form>
+            <div>
+              <p className="font-medium">Helpful Links</p>
+              <nav className="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
+                <a className="hover:opacity-75"> Contact </a>
+                <a className="hover:opacity-75"> FAQs </a>
+                <a className="hover:opacity-75"> Live Chat </a>
+              </nav>
+            </div>
+            <div>
+              <p className="font-medium">Legal</p>
+              <nav className="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
+                <a className="hover:opacity-75"> Privacy Policy </a>
+                <a className="hover:opacity-75"> Terms &amp; Conditions </a>
+                <a className="hover:opacity-75"> Returns Policy </a>
+                <a className="hover:opacity-75"> Accessibility </a>
+              </nav>
+            </div>
+          </div>
         </div>
+        <p className="mt-8 text-xs text-gray-800">
+          © {new Date().getFullYear()} Feria Inmobiliaria
+        </p>
       </div>
-    </>
+    </footer>
   );
 };
 
-export default Header;
+export default Footer;

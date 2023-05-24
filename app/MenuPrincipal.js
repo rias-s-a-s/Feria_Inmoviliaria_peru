@@ -1,21 +1,18 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import { FaWheelchair } from "react-icons/fa";
 import ItemMenu from "./ItemMenu";
-import InclusionItem from "./InclusionItem";
 import Link from "next/link";
 
-const MenuPrincipal = ({ setZoom, zoom, setContraste }) => {
+const MenuPrincipal = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [open, setOpen] = useState(false);
   return (
     <>
       <nav
         style={{ filter: "drop-shadow(0px 0px 3px black)" }}
-        className="sticky z-50 top-0 p-2 shadow-2xl md:flex md:items-center md:justify-around bg-[#0188c5] sm:bg-gradient-to-br sm:from-[#0188c5] sm:to-[#0188c5]"
+        className="sticky z-50 top-0 p-2 shadow-sm md:flex md:items-center md:justify-around bg-gray-300 sm:bg-gradient-to-r sm:from-gray-200 sm:via-[#bce1ff] sm:to-gray-200"
       >
-        <div className="flex justify-between items-center md:hidden">
+        <div className="flex justify-between items-center md:hidden ">
           {/* Escudo Logo "inicio" */}
           <Link href="/">
             <div
@@ -27,7 +24,7 @@ const MenuPrincipal = ({ setZoom, zoom, setContraste }) => {
                 src="/feria_logo.png"
                 width={300}
                 height={300}
-                alt="Escudo Normal Superior Ibagué"
+                alt="Logotype"
                 className="object-contain"
               />
             </div>
@@ -52,7 +49,7 @@ const MenuPrincipal = ({ setZoom, zoom, setContraste }) => {
         </div>
         <div className="">
           <ul
-            className={` text-center  flex flex-col h-screen md:h-auto  md:flex md:flex-row  md:items-center z-[-1] md:z-auto md:static gap-2 absolute text-white font-semibold bg-[#003823] md:bg-transparent w-full left-0 top-full md:w-auto md:py-0  md:pl-0 pl-7 md:opacity-100 opacity-0 right-[-400px] transition-all ease-in  ${
+            className={` text-center  flex flex-col h-screen md:h-auto  md:flex md:flex-row  md:items-center z-[-1] md:z-auto md:static gap-2 absolute text-blue-900 font-semibold bg-[#003823] md:bg-transparent w-full left-0 top-full md:w-auto md:py-0  md:pl-0 pl-7 md:opacity-100 opacity-0 right-[-400px] transition-all ease-in  ${
               isOpen ? ` right-0 py-11 opacity-100` : `hidden`
             }`}
           >
@@ -65,73 +62,15 @@ const MenuPrincipal = ({ setZoom, zoom, setContraste }) => {
             <ItemMenu ruta="/Inmobiliarias" setIsOpen={setIsOpen}>
               Inmobiliarias
             </ItemMenu>
-            <ItemMenu rute="/Corredores" setIsOpen={setIsOpen}>
+            <ItemMenu ruta="/Corredores" setIsOpen={setIsOpen}>
               Corredores
             </ItemMenu>
-            <ItemMenu rute="/Contacto" setIsOpen={setIsOpen}>
-              Contactanos
+            <ItemMenu ruta="/Contactanos" setIsOpen={setIsOpen}>
+              Contáctenos
             </ItemMenu>
-
-            {/* Boton WebMaster */}
-            {/* <li className="hidden lg:block">
-              <a href="https://ensiibag.sistemasivhorsnet.com/portal/">
-                <div className="w-48 h-16 flex flex-row gap-2 items-center justify-center cursor-pointer rounded-lg bg-[#005335] hover:bg-[#003823] p-3">
-                  <p className="text-white pr-2 text-lg font-bold">WebMaster</p>
-                  <Image
-                    src="/Menu/iconoWebmaster.png"
-                    width={50}
-                    height={50}
-                    alt="iconoWebmaster"
-                    className="object-contain"
-                  />
-                </div>
-              </a>
-            </li> */}
-
-            {/* Boton ley Transparencia */}
-            {/* <li className="mx-auto">
-              <a href={"/soporteYApoyo/LeyTransparencia"}>
-                <div
-                  className="w-48 h-16 flex flex-row gap-2 items-center justify-center cursor-pointer rounded-lg bg-[#005335] hover:bg-[#003823] p-3"
-                  onClick={(e) => {
-                    e.preventDefault();
-
-                    setIsOpen(false);
-                  }}
-                >
-                  <p className="text-white pr-2 text-lg font-bold">
-                    Ley de Transparencia
-                  </p>
-                  <Image
-                    src="/Menu/iconoLeyTransparencia.png"
-                    width={50}
-                    height={50}
-                    alt="iconoLeyTransparencia"
-                    className="object-contain"
-                  />
-                </div>
-              </a>
-            </li> */}
           </ul>
         </div>
       </nav>
-
-      {/* Boton de Inclusion */}
-      <div
-        title="Boton Inclusion"
-        className="text-center hidden lg:w-12 lg:h-12 lg:flex lg:sticky z-50 lg:left-[100%] border border-white bg-[#0188c5] text-white place-content-center lg:top-[30%]"
-      >
-        <button aria-label="inclusion" onClick={() => setOpen(true)}>
-          <FaWheelchair className="w-9 h-9" />
-        </button>
-        <InclusionItem
-          setZoom={setZoom}
-          zoom={zoom}
-          setOpen={setOpen}
-          open={open}
-          setContraste={setContraste}
-        />
-      </div>
     </>
   );
 };

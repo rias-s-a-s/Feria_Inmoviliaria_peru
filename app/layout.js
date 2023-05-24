@@ -1,3 +1,4 @@
+import Footer from "./Footer";
 import Header from "./Header";
 import MenuPrincipal from "./MenuPrincipal";
 import "./globals.css";
@@ -12,7 +13,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <Header />
       <MenuPrincipal />
-      <div className="-mt-12">{children}</div>
+      <div className="">{children}</div>
+
+      <Footer />
     </html>
   );
 }

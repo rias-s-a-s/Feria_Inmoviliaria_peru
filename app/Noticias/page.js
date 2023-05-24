@@ -1,7 +1,12 @@
 import React from "react";
+import SeccionPage from "../SeccionPage";
 
 const Noticias = () => {
-  return <div>Noticias</div>;
+  return (
+    <div>
+      <SeccionPage title={"Noticias"} />
+    </div>
+  );
 };
 
 export default Noticias;
