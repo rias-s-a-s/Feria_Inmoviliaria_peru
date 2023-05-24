@@ -1,11 +1,19 @@
 "use client";
+import { useState } from "react";
 import SeccionPage from "../SeccionPage";
 import ItemTeam from "./ItemTeam";
+import ModalTeam from "./ModalTeam";
 
 const Corredores = () => {
+  const [Modal, setModal] = useState({
+    show: false,
+    data: null,
+  });
   return (
     <div>
       <SeccionPage title={"Corredores"} />
+
+      {Modal.show && <ModalTeam Modal={Modal} setModal={setModal} />}
 
       {/* component */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-4 py-12">
@@ -18,12 +26,13 @@ const Corredores = () => {
           </h1>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          <ItemTeam />
-          <ItemTeam />
-          <ItemTeam />
-          <ItemTeam />
-          <ItemTeam />
-          <ItemTeam />
+          <ItemTeam setModal={setModal} />
+
+          <ItemTeam setModal={setModal} />
+          <ItemTeam setModal={setModal} />
+          <ItemTeam setModal={setModal} />
+          <ItemTeam setModal={setModal} />
+          <ItemTeam setModal={setModal} />
         </div>
       </section>
     </div>

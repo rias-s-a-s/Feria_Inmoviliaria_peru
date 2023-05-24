@@ -1,6 +1,6 @@
 const ItemTeam = () => {
   return (
-    <div className="w-full bg-white rounded-lg sahdow-lg overflow-hidden flex flex-col md:flex-row">
+    <div className="w-full bg-white rounded-lg sahdow-lg overflow-hidden flex flex-col md:flex-row cursor-pointer">
       <div className="w-full md:w-2/5 h-80">
         <img
           className="object-center object-cover w-full h-full"
