@@ -72,6 +72,7 @@ const contactanos = () => {
                   </div>
                   <div>
                     <button
+                      name="SendSubmit"
                       type="submit"
                       className="w-full text-white bg-primary rounded border border-primary p-3 transition hover:bg-opacity-90"
                     >

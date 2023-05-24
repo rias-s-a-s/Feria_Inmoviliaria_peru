@@ -1,4 +1,3 @@
-"use client";
 const Inmobiliarias = () => {
   return <div>Inmobiliarias</div>;
 };

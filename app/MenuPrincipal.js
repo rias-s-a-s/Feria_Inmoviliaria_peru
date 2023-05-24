@@ -30,7 +30,7 @@ const MenuPrincipal = () => {
             </div>
           </Link>
           <span className="text-3xl cursor-pointer mx-2 md:hidden block text-white">
-            <button onClick={() => setIsOpen(!isOpen)}>
+            <button name="Menu" onClick={() => setIsOpen(!isOpen)}>
               <svg
                 className="h-10 w-10 text-white"
                 xmlns="http://www.w3.org/2000/svg"

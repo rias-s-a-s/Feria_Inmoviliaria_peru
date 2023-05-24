@@ -20,7 +20,10 @@ function SeccionPage({ title }) {
           </h1>
           <div className="mt-1 space-y-3 sm:-mx-2 sm:mt-5 sm:flex-row sm:justify-center sm:space-y-0">
             <Link href={"/"}>
-              <button className="transform rounded-l-lg bg-[#0188c5] border-[#0188c5] hover:bg-blue-700  hover:border-blue-700 border-2 border-r-2 border-r-white hover:border-r-white px-8 py-2 text-sm font-medium capitalize tracking-wide text-white hover:text-white transition-colors duration-200">
+              <button
+                name="Ir a Inicio"
+                className="transform rounded-l-lg bg-[#0188c5] border-[#0188c5] hover:bg-blue-700  hover:border-blue-700 border-2 border-r-2 border-r-white hover:border-r-white px-8 py-2 text-sm font-medium capitalize tracking-wide text-white hover:text-white transition-colors duration-200"
+              >
                 INICIO
               </button>
             </Link>
@@ -30,6 +33,7 @@ function SeccionPage({ title }) {
                 e.preventDefault();
                 router.back();
               }}
+              name="Volver"
               className="transform rounded-r-lg border-2 bg-[#0188c5] border-[#0188c5] hover:bg-blue-700  hover:border-blue-700 px-8 py-2 text-sm font-medium capitalize tracking-wide text-white hover:text-white transition-colors duration-200"
             >
               VOLVER

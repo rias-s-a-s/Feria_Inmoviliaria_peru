@@ -113,7 +113,10 @@ const Proyectos = () => {
             </div>
           </div>
           <div className="flex justify-center">
-            <button className="p-2 border w-1/4 rounded-md bg-gray-800 text-white">
+            <button
+              name="Search"
+              className="p-2 border w-1/4 rounded-md bg-gray-800 text-white"
+            >
               Buscar
             </button>
           </div>
