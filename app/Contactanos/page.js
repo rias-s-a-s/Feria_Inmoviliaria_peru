@@ -45,12 +45,14 @@ const contactanos = () => {
                   <div className="mb-6">
                     <input
                       type="text"
+                      required
                       placeholder="Tu nombre "
                       className="w-full rounded py-3 px-[14px] text-body-color text-base border border-[f0f0f0] outline-none focus-visible:shadow-none focus:border-primary"
                     />
                   </div>
                   <div className="mb-6">
                     <input
+                      required
                       type="email"
                       placeholder="Tu correo electrónico"
                       className="w-full rounded py-3 px-[14px] text-body-color text-base border border-[f0f0f0] outline-none focus-visible:shadow-none focus:border-primary"
@@ -58,6 +60,7 @@ const contactanos = () => {
                   </div>
                   <div className="mb-6">
                     <input
+                      required
                       type="text"
                       placeholder="Tu teléfono"
                       className="w-full rounded py-3 px-[14px] text-body-color text-base border border-[f0f0f0] outline-none focus-visible:shadow-none focus:border-primary"
@@ -66,6 +69,8 @@ const contactanos = () => {
                   <div className="mb-6">
                     <textarea
                       rows={6}
+                      required
+                      minLength={15}
                       placeholder="Su mensaje"
                       className="w-full rounded py-3 px-[14px] text-body-color text-base border border-[f0f0f0] outline-none focus-visible:shadow-none focus:border-primary"
                     />
