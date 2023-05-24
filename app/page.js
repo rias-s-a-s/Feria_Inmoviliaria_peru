@@ -1,3 +1,4 @@
+"use client";
 import { Divider } from "@tremor/react";
 import Banner from "./Banner";
 import BodyMain from "./BodyMain";
@@ -84,16 +85,6 @@ const HomePage = () => {
         <ItemNoticia />
       </div>
       <Banner />
-
-      {/* section inmoviliaria */}
-      {/* <div className="container mx-auto">
-        <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 w-full">
-          <ItemPropiedad />
-          <ItemPropiedad />
-          <ItemPropiedad />
-          <ItemPropiedad />
-        </div>
-      </div> */}
 
       <main className="max-w-7xl mx-auto px-8 sm:px-16  ">
         <section className="pt-6 ">
