@@ -1,3 +1,4 @@
+"use client";
 import SeccionPage from "../SeccionPage";
 
 const contactanos = () => {

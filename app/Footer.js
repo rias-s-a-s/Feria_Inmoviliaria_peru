@@ -25,7 +25,7 @@ const Footer = () => {
                   fill="currentColor"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  strokewidth={2}
+                  strokeWidth={2}
                   className="w-5 h-5"
                   viewBox="0 0 24 24"
                 >
@@ -37,7 +37,7 @@ const Footer = () => {
                   fill="currentColor"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  strokewidth={2}
+                  strokeWidth={2}
                   className="w-5 h-5"
                   viewBox="0 0 24 24"
                 >
@@ -50,7 +50,7 @@ const Footer = () => {
                   stroke="currentColor"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  strokewidth={2}
+                  strokeWidth={2}
                   className="w-5 h-5"
                   viewBox="0 0 24 24"
                 >
@@ -64,7 +64,7 @@ const Footer = () => {
                   stroke="currentColor"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  strokewidth={0}
+                  strokeWidth={0}
                   className="w-5 h-5"
                   viewBox="0 0 24 24"
                 >
