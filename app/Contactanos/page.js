@@ -1,7 +1,41 @@
 "use client";
+import { useState } from "react";
 import SeccionPage from "../SeccionPage";
 
-const contactanos = () => {
+const Contactanos = () => {
+  const [InputValue, setInputValue] = useState({});
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch("/api/SendMail", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: InputValue.Nombre,
+          email: InputValue.Correo,
+          message: InputValue.Telefono,
+        }),
+      });
+
+      const data = await response.json();
+
+      setStatus(data.message);
+      alert("Se envio el mensaje correctamente");
+    } catch (error) {
+      alert("Error al enviar el formulario");
+    }
+  };
+
+  const handlerChanger = (e) => {
+    setInputValue({
+      ...InputValue,
+      [e.target.name]: e.target.value,
+    });
+  };
   return (
     <>
       {/* component */}
@@ -41,13 +75,15 @@ const contactanos = () => {
             </div>
             <div className="w-full lg:w-1/2 xl:w-5/12 px-4">
               <div className="bg-white relative rounded-lg p-8 sm:p-12 shadow-lg">
-                <form>
+                <form onSubmit={handleSubmit}>
                   <div className="mb-6">
                     <input
                       type="text"
                       required
                       placeholder="Tu nombre "
                       className="w-full rounded py-3 px-[14px] text-body-color text-base border border-[f0f0f0] outline-none focus-visible:shadow-none focus:border-primary"
+                      onChange={handlerChanger}
+                      name="Nombre"
                     />
                   </div>
                   <div className="mb-6">
@@ -56,6 +92,8 @@ const contactanos = () => {
                       type="email"
                       placeholder="Tu correo electrónico"
                       className="w-full rounded py-3 px-[14px] text-body-color text-base border border-[f0f0f0] outline-none focus-visible:shadow-none focus:border-primary"
+                      onChange={handlerChanger}
+                      name="Correo"
                     />
                   </div>
                   <div className="mb-6">
@@ -64,6 +102,8 @@ const contactanos = () => {
                       type="text"
                       placeholder="Tu teléfono"
                       className="w-full rounded py-3 px-[14px] text-body-color text-base border border-[f0f0f0] outline-none focus-visible:shadow-none focus:border-primary"
+                      onChange={handlerChanger}
+                      name="Telefono"
                     />
                   </div>
                   <div className="mb-6">
@@ -73,16 +113,16 @@ const contactanos = () => {
                       minLength={15}
                       placeholder="Su mensaje"
                       className="w-full rounded py-3 px-[14px] text-body-color text-base border border-[f0f0f0] outline-none focus-visible:shadow-none focus:border-primary"
+                      onChange={handlerChanger}
+                      name="Mensaje"
                     />
                   </div>
                   <div>
-                    <button
-                      name="SendSubmit"
-                      type="submit"
+                    <input
                       className="w-full text-white bg-primary rounded border border-primary p-3 transition hover:bg-opacity-90"
-                    >
-                      Enviar Mensaje
-                    </button>
+                      type="submit"
+                      value="Enviar Mensaje"
+                    />
                   </div>
                 </form>
                 <div>
@@ -897,9 +937,8 @@ const contactanos = () => {
           </div>
         </div>
       </section>
-      {/* ====== Contact Section End */}
     </>
   );
 };
 
-export default contactanos;
+export default Contactanos;
