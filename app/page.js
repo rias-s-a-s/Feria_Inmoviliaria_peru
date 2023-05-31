@@ -2,11 +2,11 @@
 import { Divider } from "@tremor/react";
 import Banner from "./Banner";
 import BodyMain from "./BodyMain";
-import ItemNoticia from "./ItemNoticia";
-import ItemPropiedad from "./Proyectos/ItemPropiedad";
+
 import MediumCard from "./MediumCard";
 import SmallCard from "./SmallCard";
 import LargeCard from "./LargeCard";
+import NewSectionNoticias from "./NewSectionNoticias";
 
 const HomePage = () => {
   const exploreData = [
@@ -72,18 +72,19 @@ const HomePage = () => {
   ];
   return (
     <div>
-      <BodyMain />
-      <Divider />
+      {/* <BodyMain />
+      <Divider /> */}
 
       {/* Seccion Noticias */}
       <h1 className="text-center font-bold text-2xl text-blue-800">
         Noticias Destacadas{" "}
       </h1>
-      <div className="max-w-6xl mx-auto grid justify-center md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-7 my-10">
+      {/* <div className="max-w-6xl mx-auto grid justify-center md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-7 my-10">
         <ItemNoticia />
         <ItemNoticia />
         <ItemNoticia />
-      </div>
+      </div> */}
+      <NewSectionNoticias />
       <Banner />
 
       <main className="max-w-7xl mx-auto px-8 sm:px-16  ">
